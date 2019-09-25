@@ -147,7 +147,7 @@
 		<div id="map" style="width: 100%; height: 660px;"></div>
 		
 		<script>
-		var layer = new L.StamenTileLayer("terrain");
+		//var layer = new L.StamenTileLayer("terrain");
 		var osm = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', { attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>', id: 'mapbox.streets-satellite', 
 			accessToken: 'pk.eyJ1IjoidGhlYmlvbG9nbyIsImEiOiJjazA1dHppOWkzdTU2M2JtbGp0ejZibnhjIn0.eUbHPdPDeQv2TOGKpyU2Lg',
 			dragging: false,
@@ -163,7 +163,7 @@
 		var map = L.map('map', {
 			center:[14.27344056884524, -87.40598398881384],
 			zoom: 7,
-			layers: osm, hon, layer, 
+			layers: osm, hon, //layer, 
 			maxBounds: [[11.847748, -80.736723],[18.5097759, -89.939528]],
 			zoomControl: false,
 			maxZoom: 12,
@@ -228,7 +228,7 @@
 		
 		var baseLayers = {
 			"Satelite": osm,
-			"Terreno": layer,
+		//	"Terreno": layer,
 			};
 		
 		var overlays = {
