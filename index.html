@@ -217,6 +217,15 @@
 		var honduras = new L.geoJson(honduras, {dashArray: '4', color: "white", weight: 1, fill: false}).addTo(map);
 		var aapp = new L.geoJson(aapp, {color: "yellow", weight: 2, fill: true, opacity: 0.5, onEachFeature: popup}).addTo(map);
 		
+		var imageBounds = [
+			[14.00, -85.16],
+			[12.06, -82.00]
+			];
+		var escalandvi = L.imageOverlay("escalandvi.jpg",
+			imageBounds, {
+			opacity: 1
+			});
+		
 		var baseLayers = {
 			"Satelite": osm,
 			"Terreno": layer,
@@ -227,6 +236,7 @@
 						"Limites Departamentales": honduras,
 						"Areas Protegidas": aapp,
 						"Índice de Vegetación de Diferencia Normalizada": ndvi, 
+						"Escala NDVI": escalandvi,
 						"Ecosistemas": icf,
 						};	
 		
